@@ -1,0 +1,43 @@
+.WebEdit_Edit{border-collapse:collapse;}
+.WebEdit_Edit td{}
+.WebEdit_Edit thead td{height:31px; padding:0 5px 0 5px; z-index:2; border-bottom:1px solid #cccccc;}
+
+.WebEdit_Edit thead td .WebEdit_abtn{text-decoration:none;display:block;background:url(edit.gif) no-repeat;margin-top:2px; height:20px; margin-left:6px;width:25px;}
+a.WebEdit_abtn:hover{border:solid 1px #999999; margin-bottom:-2px; margin-right:-2px;}
+.WebEdit_Edit thead td .WebEdit_a0 {background-position:2px 0px;}
+.WebEdit_Edit thead td .WebEdit_a1 {background-position:3px -25px;}
+.WebEdit_Edit thead td .WebEdit_a2 {background-position:3px -49px;}
+.WebEdit_Edit thead td .WebEdit_a3 {background-position:3px -73px;}
+.WebEdit_Edit thead td .WebEdit_a4 {background-position:0 -97px;}
+.WebEdit_Edit thead td .WebEdit_a5 {background-position:1px -121px;}
+.WebEdit_Edit thead td .WebEdit_a6 {background-position:3px -145px;}
+.WebEdit_Edit thead td .WebEdit_a7 {background-position:2px -169px;}
+.WebEdit_Edit thead td .WebEdit_a8 {background-position:2px -193px;}
+.WebEdit_Edit thead td .WebEdit_a9 {background-position:2px -217px;}
+.WebEdit_Edit thead td .WebEdit_a10 {background-position:2px -241px;}
+.WebEdit_Edit thead td .WebEdit_a11 {background-position:2px -265px;}
+.WebEdit_Edit thead td .WebEdit_a12 {background-position:2px -289px;}
+.WebEdit_Edit thead td .WebEdit_a13 {background-position:2px -313px;}
+.WebEdit_Edit thead td .WebEdit_a14 {background-position:2px -337px;}
+.WebEdit_Edit thead td .WebEdit_a15 {background-position:2px -361px;}
+.WebEdit_Edit thead td .WebEdit_a16 {background-position:2px -385px;}
+.WebEdit_Edit thead td .WebEdit_a17 {background-position:2px -409px;}
+.WebEdit_Edit thead td .WebEdit_a18 {background-position:2px -433px;}
+.WebEdit_Edit thead td .WebEdit_a19 {background-position:2px -475px;}
+.WebEdit_Edit thead td .WebEdit_split{display:block;width:10px;float:left;background:url(edit.gif) no-repeat 4px -452px; height:18px;}
+
+.WebEdit_down{position:absolute;display:none; margin-top:1px; margin-left:6px; padding:3px; border:1px solid #999999; background-color: #FFFFFF; z-index:10;}
+.WebEdit_down a{*position:relative;display:block;padding:2px; text-decoration:none; color:#000000; vertical-align:middle;}
+.WebEdit_down a:hover{background-color:#CCCCCC;text-decoration:none;}
+
+.WebEdit_Color{width:216px; border:0px;border-top:1px solid #000000; border-left:1px solid #000000; padding:0px;}
+.WebEdit_Color a{width:7px; height:7px; float:left; border-bottom:1px solid #000000; border-right:1px solid #000000; overflow:hidden;}
+.WebEdit_Color a:hover{border:solid 1px #FFFFFF; margin-left:-1px; margin-top:-1px;}
+
+.WebEdit_InsertFace{width:418px;}
+.WebEdit_InsertFace a{float:left;}
+.WebEdit_InsertFace img{border:1px solid #999999; display:block;}
+
+.WebEdit_left{float:left;}
+.WebEdit_HTMLEdit{padding:0px; margin:0px;height:280px; width:100%;}
+.WebEdit_Mask{position:absolute; width:100%; height:290px; margin:-290px 0px 0px 0px; padding:0px; background-color:red;}
