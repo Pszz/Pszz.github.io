@@ -193,9 +193,9 @@
                 return proxy;
 			}
 			//创建on事件
-			function $on(d,e,fn,o){
+			function $on(d,e,fn){
 				if(d && typeof(fn) == "function"){
-					d.attachEvent ? d.attachEvent("on" + e, typeof o == "function" ? fn : fn) : d.addEventListener(e, fn, false);
+					d.attachEvent ? d.attachEvent("on" + e, fn) : d.addEventListener(e, fn, false);
 				}
 				return d;
 			}
