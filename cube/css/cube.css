@@ -1,0 +1,136 @@
+body{
+	height:100vh;
+}
+.header{
+	  height: 300px;
+	  position: relative;
+	  border-bottom: 1px solid #ddd;
+ }
+.container{
+  position:absolute;
+  height:100px;
+  width:100px;
+  left:33%;
+  top:50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  -webkit-perspective:400px;
+          perspective:400px;
+}
+.cube{
+  height:100px;
+  widht:100px;
+  -webkit-transform-origin:50% 50%;
+          transform-origin:50% 50%;
+  -webkit-transform-style:preserve-3d;
+          transform-style:preserve-3d;
+  -webkit-animation:rotate 4s infinite ease-in-out;
+          animation:rotate 4s infinite ease-in-out;
+
+}
+.side{
+  position:absolute;
+  display:block;
+  height:100px;
+  width:100px;
+}
+.side1{
+  background:#41C3AC;
+  -webkit-transform:translateZ(100px);
+          transform:translateZ(100px);
+}
+.side2{
+  background:#FF884D;
+  -webkit-transform:rotateY(90deg) translateZ(100px);
+          transform:rotateY(90deg) translateZ(100px);
+}
+.side3{
+  background:#32526E;
+  -webkit-transform:rotateY(180deg) translateZ(100px);
+          transform:rotateY(180deg) translateZ(100px);
+}
+.side4{
+  background:#65A2C5;
+  -webkit-transform:rotateY(-90deg) translateZ(100px);
+          transform:rotateY(-90deg) translateZ(100px);
+}
+.side5{
+  background:#FFCC5C;
+  -webkit-transform:rotateX(90deg) translateZ(100px);
+          transform:rotateX(90deg) translateZ(100px);
+}
+.side6{
+  background:#FF6B57;
+  -webkit-transform:rotateX(-90deg) translateZ(100px);
+          transform:rotateX(-90deg) translateZ(100px);
+}
+
+@-webkit-keyframes rotate{
+  0%{
+    -webkit-transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  33.33%{
+     -webkit-transform:rotateX(360deg) rotateY(0deg)  rotateZ(0deg);    
+  }
+  66.66%{
+     -webkit-transform:rotateX(360deg) rotateY(360deg)  rotateZ(0deg);
+  }
+  100%{
+     -webkit-transform:rotateX(360deg) rotateY(360deg)  rotateZ(360deg);
+  }
+}
+@keyframes rotate{
+  0%{
+    transform:rotateX(0deg) rotateY(0deg);
+  }
+  50%{
+    transform:rotateX(360deg) rotateY(0deg);    
+  }
+  100%{
+    transform:rotateX(360deg) rotateY(360deg);
+  }
+}
+a{
+  font-family:helvetica;
+  color:#428bca;
+  text-align:center;
+  display:block;
+}
+.container2{
+  left:66%;
+}
+.container2 .side{
+  border-radius:50%;
+}
+
+.content{}
+/* 舞台 */
+.content .box{width:400px;height:400px;margin:250px auto 0;}
+/* 魔方结构 */
+.cube-1{width:200px;height:200px; box-sizing: border-box;position:relative;}/* transform: rotateY(-60deg);position:absolute;left:0;top:0;bottom:0;right:0; */
+/* 单个结构 */
+.cube-1 .lump{
+	width:31.3%;height:100%;float:left;margin: 1%;opacity:0.9;filter: alpha(opacity:90);border-radius:3px;
+	  -webkit-transform-origin: 50% 50%;
+  	  transform-origin: 50% 50%;
+	  -webkit-transform-style: preserve-3d;
+  	  transform-style: preserve-3d;
+}
+/* 每面结构 */
+.cube-1 .lump-a,.cube-1 .lump-b,.cube-1 .lump-c,.cube-1 .lump-d,.cube-1 .lump-e,.cube-1 .lump-f{height:100%;width:100%;}
+.cube-1 .lump-top,.cube-1 .lump-center,.cube-1 .lump-foot{width:100%;height: 31.3%;}
+.cube-1 .lump-a{}
+.cube-1 .lump-b{transform: translate(-200px,-200px);}
+.cube-1 .lump-c{transform: translate(200px,-400px);}
+.cube-1 .lump-d{transform: translate(0,-800px);}
+.cube-1 .lump-e{transform: translate(0,-600px);}
+.cube-1 .lump-f{}
+.cube-1 .lump-a .lump{background-color:#41C3AC; transform:translateZ(360px);}
+.cube-1 .lump-b .lump{background-color:#FF884D;}
+.cube-1 .lump-c .lump{background-color:#32526E;}
+.cube-1 .lump-d .lump{background-color:#65A2C5;}
+.cube-1 .lump-e .lump{background-color:#FFCC5C;}
+.cube-1 .lump-f .lump{background-color:#FF6B57;}
+
+
+
