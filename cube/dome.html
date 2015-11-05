@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh_cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Rubik's cube</title>
+<style>
+*{padding:0;margin:0;}
+input{width:100px;height:35px;background-color:#ccc;padding:0;}
+#div div{border:1px solid red;height:100px;width:100px;display:none;}
+#div .active{background-color:#fff;}
+</style>
+
+<script>
+	window.onload=function(){
+		var oParent=document.getElementById('div');
+		var aInput=Array.prototype.slice.call(oParent.getElementsByTagName('input'));
+		var aDiv=oParent.getElementsByTagName('div');
+	
+		aInput.forEach(function(v,i){
+			v.onclick = function(){
+				aInput.forEach(function(k,index){
+					k.className = "";
+				    aDiv[index].style.display = "none";
+				});
+				this.className = "active";
+				aDiv[i].style.display='block';
+			}
+		});
+/*		
+		for(var j = 0 ; j < aInput.length; j++){
+			aInput[j].onclick = function(){
+				console.log("外层:" +　j + "内层:" +　i);
+				for(var i = 0; i < aInput.length; i++){
+					aInput[i].className = "";
+					aDiv[i].style.display = "none";
+				}
+				this.className='active';
+				console.log("外层:" +　j + "内层:" +　i);
+				//aDiv[i].style.display='block'; // <-- i 值需要另处理
+			}
+		}
+
+		for(i=0;i<aInput.length;i++){
+			(function (index){
+				aInput[index].onclick=function(){
+					for(i=0;i<aInput.length;i++){
+						aInput[i].className='';
+						aDiv[i].style.display='none';
+					}
+					this.className='active';
+					aDiv[index].style.display='block';
+				};
+			})(i);
+		};
+	*/
+	};
+</script>
+
+</head>
+<body>
+	<div id="div">
+		<input type="button" value="1">
+		<input type="button" value="2">
+		<input type="button" value="3">
+		<input type="button" value="4">
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+		<div>4</div>
+	</div>
+</body>
+</html>
