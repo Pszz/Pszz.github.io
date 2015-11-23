@@ -26,33 +26,6 @@ input{width:100px;height:35px;background-color:#ccc;padding:0;}
 				aDiv[i].style.display='block';
 			}
 		});
-/*		
-		for(var j = 0 ; j < aInput.length; j++){
-			aInput[j].onclick = function(){
-				console.log("外层:" +　j + "内层:" +　i);
-				for(var i = 0; i < aInput.length; i++){
-					aInput[i].className = "";
-					aDiv[i].style.display = "none";
-				}
-				this.className='active';
-				console.log("外层:" +　j + "内层:" +　i);
-				//aDiv[i].style.display='block'; // <-- i 值需要另处理
-			}
-		}
-
-		for(i=0;i<aInput.length;i++){
-			(function (index){
-				aInput[index].onclick=function(){
-					for(i=0;i<aInput.length;i++){
-						aInput[i].className='';
-						aDiv[i].style.display='none';
-					}
-					this.className='active';
-					aDiv[index].style.display='block';
-				};
-			})(i);
-		};
-	*/
 	};
 </script>
 
