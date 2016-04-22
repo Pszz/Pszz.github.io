@@ -24,8 +24,8 @@ body{
           transform-origin:50% 50%;
   -webkit-transform-style:preserve-3d;
           transform-style:preserve-3d;
- /* -webkit-animation:rotate 4s infinite ease-in-out;
-          animation:rotate 4s infinite ease-in-out;*/
+  -webkit-animation:rotate 4s infinite ease-in-out;
+          animation:rotate 4s infinite ease-in-out;
 
 }
 .side{
