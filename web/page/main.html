@@ -22,12 +22,27 @@
 		<link rel="dns-prefetch" href="//img30.360buyimg.com">
 		<link rel="dns-prefetch" href="//d.3.cn">
 		<link rel="dns-prefetch" href="//Pszz.github.io">
-		<script src="../script/config.source.js" data="uri=../"></script>
+		<script src="../script/config.source.js" data="js=[sky_v1/core,main];uri=../"></script>
     </head>
 
     <body class="_main">
+    	<header>
+    		<nav class="box" id="head-tab">
+    			<a class="logo" href="../index.html"><img src="../image/logo.png"></a>
+    			<a href="#" v="main">Home<span></span></a>
+    			<a href="#" v="coll">Collection<span></span></a>
+    			<a href="#" v="lab">My Lab<span></span></a>
+    			<a href="#" v="about">About Me<span></span></a>    			    
+    		</nav>    		
+    	</header>
     	<section>
-    		测试数据
+    	    <!-- 要做音乐播放，所以页面用iframe打开 -->
+    		<iframe class="box-iframe" name="box-iframe" id="box-iframe" onload="try{if(window.frames['box-iframe'].location.href.indexOf('about:blank')<0){API.showMain(true)}else{API.showMain()}}catch(e){}" allowtransparency="true" scrolling="no" border="0" frameborder="0" src="about:blank"></iframe>
     	</section>
+    	<footer>
+    		<div class="hide">
+    			<!-- <audio controls="controls" id="h5audio_media" height="0" width="0" autoplay="false" src="media/lanlianhua.m4a"></audio> -->
+    		</div>
+    	</footer>
     </body>
 </html>

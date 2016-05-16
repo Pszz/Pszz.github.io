@@ -1,47 +1,19 @@
-/********
- ** date : 2015-08-08
- ** author : Pszz
- ** remark ： 用于定义的一些特殊函数 
- **
- ***********/
 
-void function(){
-	var api = API;
-   //返回顶部
-	void function(){
-		  var scrolldelay;
-		  api.PgUp = function(flag){
-			 // window.scrollTo(0,0); 直接回顶部
-			 //暂时不使用动画
-			 var y = window.scrollY;
-			 if(y <= 0 || flag){
-				clearTimeout(scrolldelay);
-			 }else{
-				window.scrollBy(0,-100); 
-				scrolldelay = setTimeout(function(){
-					$.PgUp();
-				},10); 
-			}
-		  };
-	}();
-  //弹窗
-  void function(fm){
-	  
-	 var mask = [
-	 	'<div class="mask">',
-		 	'{#data}',
-		'</div>'
-	 ].join("");
-	  
-	//alert; - msg
-  	fm.alert = function(s){
-
-	}; 
-	//confirm  - msg ,yes ,no
-	fm.confirm = function(s,y,n){
-		
-	};
-  }(api.msg = {});
-
-}; 
-
+sky.use(["dom"],function($$){
+     //绑定首页跳转数据
+    (function(){
+        var domList = $$.get("#head-tab a"),
+            path = "/page/"; //网页存放page下面，除了首页
+        for(var i = 0; i < domList.length; i++){
+           domList[i].onclick = function(){
+              var uri = this.getAttribute("v") || "";
+              if(uri){
+                 uri = API.config.rootPath + path + uri;
+              }
+                 
+           };
+        }         
+    }());
+  
+    
+});

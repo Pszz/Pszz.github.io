@@ -3,7 +3,7 @@ var API = {data:{}};
 void function(api){
     var doc = document, J = api.JSON = {}, M = api.msg = {};
     var suffix = ".js",c,u;
-    //公共配置  例如title和客服qq等  
+    //公共配置  例如title
      c = api.config = {
         rootPath : "",//根目录
         title : "前端code - [Pszz]",//通用title
@@ -100,7 +100,12 @@ void function(api){
 	//dom加载完成后执行
     function domReady(){
         loadPageJS();
-		
+        var aList = document.getElementsByTagName("a");
+		for(var i = 0; i < aList.length; i++){
+            if(aList[i].getAttribute("href") == "#"){ //部分浏览器会打开新窗口
+                aList[i].href = "javascript:;";
+            }
+        }
     }
     //文档流加载完成后 写入js
     doc.attachEvent ? doc.attachEvent("onreadystatechange", function(){
@@ -112,7 +117,6 @@ void function(api){
 
 
 //特殊公共函数
-function showMain(){
-	window.frames['box-iframe'].location.href = API.config.rootPath + "page/main.html";
+API.showMain = function(uri){
+	window.frames['box-iframe'].location.href = API.config.rootPath + (uri? "" : "page/home.html");
 }
-function showPage(){}

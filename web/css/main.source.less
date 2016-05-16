@@ -3,6 +3,13 @@
 .-text-height(@h){
     height: @h; line-height: @h;
 }
+.-trans-form(@fn:initial){
+    transform: @fn;
+    -webkit-transform:@fn;
+    -moz-transform:@fn;
+    -o-transform:@fn;
+    -ms-transform:@fn;
+}
 .-trans(@value:all,@time:1s,@linear:linear){
 	transition: @value @time @linear;
 	-webkit-transition: @value @time @linear;
@@ -10,7 +17,41 @@
 	-o-transition: @value @time @linear;
 	-ms-transition: @value @time @linear;
 }
+//名称 时间 曲线 延时 次数 是否逆转 是否停留
+.-anima(@name:anima,
+    @duration:1s,
+    @timing:linear,
+    @delay:0,
+    @count:1,
+    @direction:normal,
+    @state:running,
+    @mode:none){
+    animation: @name @duration @timing @delay; @count @direction;
+    animation-play-state: @state;
+    animation-fill-mode : @mode;
+    
+    -webkit-animation: @name @duration @timing @delay; @count @direction;
+    -webkit-animation-play-state: @state;
+    -webkit-animation-fill-mode : @mode;
+    
+    -moz-animation: @name @duration @timing @delay; @count @direction;
+    -moz-animation-play-state: @state;
+    -moz-animation-fill-mode : @mode;
+    
+    -o-animation: @name @duration @timing @delay; @count @direction;
+    -o-animation-play-state: @state;
+    -o-animation-fill-mode : @mode;
+    
+    -ms-animation: @name @duration @timing @delay; @count @direction;
+    -ms-animation-play-state: @state;
+    -ms-animation-fill-mode : @mode;}
+
 /* ======= 通配区域-begin ======= */
+.-keyframes(@name:anima,@val:none){
+    @keyframes @name{
+        @val
+    }
+}
 html,body{padding:0;margin:0;}
 html{-webkit-locale:"zh_CN";}
 body{
@@ -145,7 +186,6 @@ header{
 	nav{
 		padding:10px 0;
 		a{
-			font-family: cursive,'Open Sans','Hiragino Sans GB','Microsoft YaHei','WenQuanYi Micro Hei',Arial,Verdana,Tahoma;
 			font-size: 18px;
 			color:#000;
 			font-weight: bold;
@@ -182,14 +222,24 @@ footer{
 	width:100%;
 }
 
-
-  /* _index */
+/* _index */
 ._index{
-    
+    background-color: #deecdf;
+    .icon-img{
+        height:200px;
+        position: relative;
+        top: 50px;
+        img{
+            height:100%;
+            display: block;
+            border-radius: 50%;
+            margin: 0 auto;
+            
+        }
+    }
 }
 
- /* _main */
+/* _main */
 ._main{
-    background-color:red;
-    height:20px;/*js向上传递高度*/
+    
 }

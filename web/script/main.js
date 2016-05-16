@@ -1,0 +1,1 @@
+sky.use(["dom"],function(t){!function(){for(var e=t.get("#head-tab a"),n="/page/",a=0;a<e.length;a++)e[a].onclick=function(){var t=this.getAttribute("v")||"";t&&(t=API.config.rootPath+n+t)}}()});
