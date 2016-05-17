@@ -14,10 +14,14 @@
         $("._mast .menu").attr("class", "menu "+ sid );    
     }
     fn.mastClose = function(){
+        var atv = $(".pu .list .atv");
         $("._mast").hide();
         $("._mast .menu").attr("class", "menu"); 
-        $(".pu .list .atv")[0].flag = false;
-        $(".pu .list .atv").attr("class", "li"); 
+        if(atv.length){
+            atv[0].flag = false;
+            atv.attr("class", "li"); 
+        }
+        
         document.body.style.overflowY = "";
     }
     setTimeout(function(){
