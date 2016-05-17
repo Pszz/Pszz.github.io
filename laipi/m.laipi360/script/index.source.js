@@ -1,4 +1,17 @@
 (function(){
+    var fn = API.fn = API.fn || {};
+    fn.mastShow = function(s,sid){
+        if(sid == undefined || sid == ""){
+            alert("参数错误");
+            return false;
+        }         
+        $("._mast").show();
+        $("._mast .menu").attr("class", "menu "+ sid );    
+    }
+    fn.mastClose = function(){
+         $("._mast").hide();
+        $("._mast .menu").attr("class", "menu"); 
+    }
     setTimeout(function(){
         window.scrollTo(0,1);//进入的时候隐藏地址栏
         $("a[href='#']").attr("href","javascript:;");
@@ -40,4 +53,31 @@
         });
         
     })();
+
+  //底部菜单
+  (function(){
+      var lastClick;
+      var isTouch = 'createTouch' in document;
+      $("footer.pu .list a").on(!!isTouch?"touchstart":"mousedown",function(){
+            if(lastClick != this){
+                if(lastClick){
+                    lastClick.flag = false;
+                }
+                lastClick = this;
+            }
+            var that = $(this),sid = "";
+            $("footer.pu .list a.atv").removeClass("atv");
+            if(!this.flag){
+                that.attr("class","li atv");
+                fn.mastShow(undefined,that.attr("sid"));
+                this.flag = true;
+            }else{
+                that.attr("class","li");
+                fn.mastClose();
+                this.flag = false;
+            }
+            
+      });
+      
+  }());
 })();

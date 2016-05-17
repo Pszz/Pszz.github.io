@@ -132,6 +132,8 @@ body{
     color:#6e6e6e;
 	background-color: #fff;
     -webkit-font-smoothing:antialiased;
+    overflow-x: hidden;
+    width: 100%;
     font-family: 'Open Sans', 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', Arial, Verdana, Tahoma;
 }
 
@@ -274,9 +276,9 @@ input.ipt-error{
             span{color:#fff;}
         }
     }
-      /* 内容 */
+    /* 内容 */
  section{
-         .bg-ccc{background-color: #f5f5f5; ._border_sizing;padding: 0 3%;}
+         .bg-ccc{background-color: #f5f5f5; ._border_sizing;padding: 0 3%;padding-bottom: 50px;}
          .tab h4{background-color: #f5f5f5;}
         /* 顶部轮播图 */
         .banner{
@@ -423,4 +425,112 @@ input.ipt-error{
         }
      }
  }
+}
+/* 底部菜单 */
+footer.pu{
+    position: fixed;
+    bottom:0;
+    left: 0;
+    z-index: 100;
+    right: 0;
+    width: 100%;
+    height: 55px;
+    background-color: #fff;
+    box-shadow: 0 -1px 6px #ccc;
+    nav.list{text-align: center;position: relative;}
+    .li{display: block;float: left;width:25%;outline: none;}
+    a.atv{
+        div{
+            background-position-y: -41px;
+            color: #de1b07;
+        }
+    }
+    div{
+        width: 25px; height: 30px; margin: 0 auto;
+        background: url(../css/img/footer-icon.png) no-repeat;
+    }
+    .li span{
+        display: block;
+        line-height: 15px;
+        text-align: center;
+    }
+    .login{
+      background-position-x: -52px; 
+    }
+    .gz{
+        background-position: -103px 3px;
+        width: 26px;
+    }
+    .other{
+        background-position: -152px 2px;
+        width: 30px;
+    }
+     a.atv div.gz{
+        background-position-y: -38px;
+    }
+     a.atv div.other{
+        background-position:-152px -40px;
+    }
+}
+
+._mast{
+     display: none;
+     width: 100%;
+     position: fixed;
+     top: 0;
+     bottom: 55px;
+     left: 0;
+     right: 0;
+     z-index: 9999;
+     background-color: rgba(0,0,0,0.5);
+    .menu{
+        position: absolute;
+        width: 100%;
+        background-color: #fff;
+        bottom: 15px;
+        padding: 10px 0 10px 20px;
+        a{
+            display: block;
+            width: 100%;
+            padding: 10px;
+            border-bottom: 1px solid #f3f3f3;
+            &:last-child{
+                border:0 none;
+            }
+            line-height: 45px;
+            text-align: left;
+            text-indent: 20px;
+        }
+        img{height: 45px;width: auto;display: block;float: left;}
+        .sw{
+            border-width: 15px 10px 0px 10px;
+            border-color: #FFF transparent transparent transparent;
+            display: block;
+            position: absolute;
+            border-style: solid;
+            right: 0;
+            width: 0;
+            bottom: -15px;
+        }
+    }
+    .li1{
+        .sw{
+            left: 10%;
+        }
+    }
+    .li2{
+        .sw{
+            left: 33%;
+        }
+    }
+    .li3{
+        .sw{
+            left: 57%;
+        }
+    }
+    .li4{
+        .sw{
+           left: 81%;
+        }
+    }
 }
