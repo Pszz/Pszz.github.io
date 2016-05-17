@@ -1,11 +1,12 @@
 (function(){
     var fn = API.fn = API.fn || {};
+    var isTouch = 'createTouch' in document;
     fn.mastShow = function(s,sid){
         if(sid == undefined || sid == ""){
             alert("参数错误");
             return false;
         }   
-        $("._mast").click(function(){
+        $("._mast").on(!!isTouch?"touchstart":"mousedown",function(){
             API.fn.mastClose();
         });
         $("._mast").show();
@@ -13,8 +14,10 @@
         $("._mast .menu").attr("class", "menu "+ sid );    
     }
     fn.mastClose = function(){
-         $("._mast").hide();
+        $("._mast").hide();
         $("._mast .menu").attr("class", "menu"); 
+        $(".pu .list .atv")[0].flag = false;
+        $(".pu .list .atv").attr("class", "li"); 
         document.body.style.overflowY = "";
     }
     setTimeout(function(){
@@ -62,7 +65,6 @@
   //底部菜单
   (function(){
       var lastClick;
-      var isTouch = 'createTouch' in document;
       $("footer.pu .list a").on(!!isTouch?"touchstart":"mousedown",function(){
             if(lastClick != this){
                 if(lastClick){
