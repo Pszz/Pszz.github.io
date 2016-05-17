@@ -4,13 +4,18 @@
         if(sid == undefined || sid == ""){
             alert("参数错误");
             return false;
-        }         
+        }   
+        $("._mast").click(function(){
+            API.fn.mastClose();
+        });
         $("._mast").show();
+        document.body.style.overflowY = "hidden";
         $("._mast .menu").attr("class", "menu "+ sid );    
     }
     fn.mastClose = function(){
          $("._mast").hide();
         $("._mast .menu").attr("class", "menu"); 
+        document.body.style.overflowY = "";
     }
     setTimeout(function(){
         window.scrollTo(0,1);//进入的时候隐藏地址栏
