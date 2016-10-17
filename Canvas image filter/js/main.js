@@ -92,8 +92,6 @@ $.on($("mirror"),"click",function(){
 		$.filter.mirror(context,canvasData);
 		context.putImageData(canvasData,0,0);
 });
-
-
 //滤镜效果
 $.filter = {
 	//负片-反色
