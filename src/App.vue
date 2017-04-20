@@ -65,7 +65,9 @@ body,
   height: 100%;
   width: 100%;
   background-color: @theme-color;
-  z-index: 100;
+  z-index: 9999;
+  top:0;
+  left:0;
   .prog {
     background-color: #fff;
     position: absolute;
