@@ -3,7 +3,7 @@
         <div class="anim-box">
             <div class="anim-l"></div>
             <h1 class="title">
-                    <span>For Learning</span>
+                    <span>Homepage</span>
                     <router-link to="/main">Go</router-link>
                  </h1>
             <div class="anim-r"></div>

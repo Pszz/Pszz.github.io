@@ -1,4 +1,5 @@
   @theme-color: #95cb75;
+  // 动画函数
   .-anima(@name: anima, @duration: 1s, @timing: linear, @delay: 0s, @count: 1, @direction: normal, @state: running, @mode: none) {
     //name 名称，duration 动画时长，timing 动画曲线时长，delay 动画之前的延迟，count 次数，direction 是否反向播放
     //state 状态（运行态，暂停态） mode 是否保持最后一帧
@@ -22,7 +23,7 @@
     -ms-animation-play-state: @state;
     -ms-animation-fill-mode: @mode;
   }
-
+// 过渡变形
   .-trans-form(@fn: initial) {
     transform: @fn;
     -webkit-transform: @fn;
@@ -30,7 +31,7 @@
     -o-transform: @fn;
     -ms-transform: @fn;
   }
-
+// 过渡函数
   .-trans(@value: all, @time: 1s, @linear: linear) {
     transition: @value @time @linear;
     -webkit-transition: @value @time @linear;
