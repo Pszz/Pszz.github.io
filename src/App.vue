@@ -1,49 +1,55 @@
 <template>
   <div id="app">
-    <div :class="setupClass"
-         id="setup">
+    <div :class="setupClass" id="setup">
       <div class="prog">
         <span v-text="progress"></span>
       </div>
     </div>
+    <c-ai></c-ai>
     <router-view></router-view>
   </div>
 </template>
 
 <script>
+
+import CAi from './components/Ai.vue'
 export default {
   name: 'app',
-  data() {
+  components: {
+    CAi
+  },
+  data () {
     return {
       progress: 0,
       setupClass: ''
     }
   },
   watch: {
-    '$route'(to, from) {
-      this.loading();
+    '$route' (to, from) {
+      this.loading()
     }
   },
   methods: {
     loading: function (s) {
-      var that = this, temp = 0;
-      this.setupClass = "setup";
-      var timer = setInterval(function () {
-        temp = temp + 5;
+      let that = this
+      let temp = 0
+      this.setupClass = 'setup'
+      let timer = setInterval(function () {
+        temp = temp + 5
         if (temp > 99) {
-          that.progress = "OK";
-          clearInterval(timer);
+          that.progress = 'OK'
+          clearInterval(timer)
           setTimeout(function () {
-            that.setupClass = "hd";
+            that.setupClass = 'hd'
           }, 800)
         } else {
-          that.progress = temp + "%";
+          that.progress = temp + '%'
         }
-      }, 50);
+      }, 50)
     }
   },
-  created() {
-    this.loading();
+  created () {
+    this.loading()
   }
 }
 </script>
@@ -66,8 +72,8 @@ body,
   width: 100%;
   background-color: @theme-color;
   z-index: 9999;
-  top:0;
-  left:0;
+  top: 0;
+  left: 0;
   .prog {
     background-color: #fff;
     position: absolute;
@@ -96,22 +102,26 @@ body,
     }
   }
 }
-.setup{
+.setup {
   .-anima(anim-setup, 0.7s, linear, 1.5s, 1);
 }
 .setup .prog {
   .-anima(anim-prog, 1.5s, ease-out, 0s, 1);
 }
 @keyframes anim-setup {
-  0%{opacity:0.8}
-  100%{opacity:0}
+  0% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 @keyframes anim-prog {
   0% {
     width: 100%;
     height: 100px;
   }
-  100%{
+  100% {
     width: 100%;
     height: 100%;
   }
