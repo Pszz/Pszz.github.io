@@ -1,3 +1,3 @@
-# Pszz.github.io
+# It's just a dusty website.
 
-  -> My home pages source
+[www.piszz.com](www.piszz.com)
